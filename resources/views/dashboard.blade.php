@@ -13,17 +13,22 @@
     
         <!-- Stories created by the logged-in user -->
         <h2 class="heading-your-story">Your Stories</h2>
-        @if(auth()->user()->stories->count() > 0)
-            <ul class="story-box101">
-                @foreach(auth()->user()->stories as $story)
-                    <li class="story-box">
-                        <a href="{{ route('stories.show', $story->id) }}">{{ $story->title }}</a>
-                    </li>
-                @endforeach
-            </ul>
-        @else
-            <p>You haven't created any stories yet.</p>
-        @endif
+        <div class="story-container">
+            @if(auth()->user()->stories->count() > 0)
+                <ul class="story-box101">
+                    @foreach(auth()->user()->stories as $story)
+                        <li class="story-box">
+                            <a class="view-btn" href="{{ route('stories.show', $story->id) }}">view</a>
+                            <p class="title">{{ $story->title }}</p>
+                            <p class="descp">{{ $story->description }}</p>
+                            <img src="https://images.pexels.com/photos/3218465/pexels-photo-3218465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+                        </li>
+                    @endforeach
+                </ul>
+            @else
+                <p>You haven't created any stories yet.</p>
+            @endif
+        </div>
     
     </div>
    

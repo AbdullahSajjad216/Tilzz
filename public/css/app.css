@@ -1506,7 +1506,7 @@ select {
 
 .top-bar-dashboard .btn{
   width: 179px;
-  border-radius: 25px;
+  border-radius: 28px;
   padding: 10px;
   text-align: center;
   align-items: center;
@@ -1520,12 +1520,85 @@ select {
 
 .story-box101{
   padding: 0px;
+  height: 100%;
 }
 
 .story-box{
+  position: relative;
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-color: white;
   border-radius: 1rem;
   margin-top: 10px;
+  overflow: hidden;
+}
+
+.story-box img{
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0%;
+  margin-bottom: 20px;
+  height: 450px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.story-box .title{
+  margin: 0;
+  margin-left: 2%;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.story-box .descp{
+  margin: 0;
+  margin-left: 2%;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.story-container{
+  height: 100%;
+  overflow: auto;
+}
+
+.story-box .view-btn{
+  background-color: #4F46E5;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 18px;
+  position: absolute;
+  top:20px;
+  right:2%;
+  text-decoration: none;
+  padding:6px;
+  width: 60px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width:780px){
+  .story-box img{
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+ .story-box .title{
+    margin-left: 3%;
+  }
+  
+  .story-box .descp{
+    margin-left: 3%;
+    width: 80%;
+  }
+
+  .story-box .view-btn{
+    right:3%;
+  } 
 }
