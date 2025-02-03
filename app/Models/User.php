@@ -47,5 +47,11 @@ class User extends Authenticatable
 {
     return $this->belongsTo(\App\Models\Organization::class, 'organization_id');
 }
+// In App\Models\User.php
+public function stories()
+{
+    return $this->hasMany(Story::class, 'author_id');
+}
+
 
 }

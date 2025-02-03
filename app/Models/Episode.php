@@ -11,9 +11,14 @@ class Episode extends Model
 
     protected $fillable = ['story_id', 'title', 'content', 'created_by'];
 
+    // public function story()
+    // {
+    //     return $this->belongsTo(\Wink\WinkPost::class, 'story_id');
+    // }
+
     public function story()
     {
-        return $this->belongsTo(\Wink\WinkPost::class, 'story_id');
+        return $this->belongsTo(Story::class, 'story_id', 'id');
     }
 
     public function author()
