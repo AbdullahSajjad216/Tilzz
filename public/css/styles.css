@@ -23,6 +23,8 @@
     height: auto;
     margin: 0px;
     padding: 10px;
+    display: flex;
+    justify-content:end;
   }
   
   .top-bar-dashboard .btn{
@@ -161,16 +163,62 @@
     margin-left: 5px;
   }
   
-  
-  @media screen and (max-width:780px){
-    
-   .story-box .title{
-      margin-left: 3%;
+  @media screen and (max-width:1100px){
+
+    .story-box101{
+      padding: 0px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 48% 48%;
+      grid-template-rows: auto;
+      row-gap: 14px;
+      justify-content: space-evenly;
+    }
+
+    .story-box{
+      height: 200px;
     }
     
-    .story-box .descp{
-      margin-left: 3%;
-      width: 80%;
+  }
+
+  @media screen and (max-width:660px){
+
+    .story-box101{
+      padding: 0px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 98%;
+      grid-template-rows: auto;
+      row-gap: 14px;
+      justify-content: space-evenly;
+    }
+
+    .story-box{
+      height: 200px;
+    }
+    
+  }
+  
+  
+  @media screen and (max-width:780px){
+
+    .top-bar-dashboard .btn{
+      width: 129px;
+      border-radius: 28px;
+      padding: 10px;
+      text-align: center;
+      align-items: center;
+      font-size: 12px;
+    }
+    
+    .main-user-dashboard{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: "dashboard";
+    }
+
+    .leftdiv{
+      display: none;
     }
   
   }
@@ -199,6 +247,31 @@
   .active-leftbar{
     background-color: #F5F7F9;
 
+  }
+
+  .viewmore-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .viewmore-div button{
+    width: 120px;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    border-style: solid;
+    border-color: #4F46E5;
+    color: #4F46E5;
+    background-color: transparent;
+  }
+
+  .viewmore-div button:hover{
+   
+    background-color: #4F46E5;
+    color: white;
   }
 
   /************* heart icon like dislike ***********************/

@@ -52,6 +52,9 @@
                 <p>You haven't created any stories yet.</p>
             @endif
         </div>
+        <div class="viewmore-div">
+            <button>View More</button>
+        </div>
     </div>
     
 </x-app-layout>
